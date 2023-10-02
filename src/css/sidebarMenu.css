@@ -15,7 +15,7 @@
 
 .menu-item {
   display: flex;
-  overflow: scroll;
+
 
   align-items: center;
   gap: 30px;
