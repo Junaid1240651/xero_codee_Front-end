@@ -87,8 +87,13 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        Hi{" "}
-        {userDetails ? userDetails.firstName + " " + userDetails.lastName : ""}
+        <p>
+          Hi{" "}
+          {userDetails
+            ? userDetails.firstName + " " + userDetails.lastName
+            : ""}
+        </p>
+
         <p>Welcome To XeroCodee Ecosystem</p>
       </div>
       <div className="steps-container">
