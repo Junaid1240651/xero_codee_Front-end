@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import XeroLogo from "../images/xerologo.png";
 import SearcIcon from "../images/searcIcon.png";
 import Upgrade from "../images/upgrade.png";
@@ -6,10 +6,18 @@ import iconInfo from "../images/iconInfo.png";
 import notifications from "../images/notifications.png";
 import Settings from "../images/Settings.png";
 import mail from "../images/mail.png";
-import "../css/navbar.css";
 import Arrow from "../images/arrow.png";
+import "../css/navbar.css"; // Import your CSS file
 
-const Navbar = () => {
+const Navbar = ({ onAuthentication }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+  const handleClick = () => {
+    onAuthentication();
+  };
   return (
     <div className="navbar-container">
       <div className="navbar-left">
@@ -42,10 +50,17 @@ const Navbar = () => {
           </div>
         </div>
         <div className="xero-code">
-          <div className="profileArrow">
+          <div className="profileArrow" onClick={toggleDropdown}>
             <p>Xero Code</p>
             <img src={Arrow} alt="profileArrow" />
           </div>
+          {isOpen && (
+            <div className="dropdown-content">
+              <p className="Logout" onClick={handleClick}>
+                Logout
+              </p>
+            </div>
+          )}
           <div className="info-icon">
             <img src={iconInfo} alt="InfoIcon" />
           </div>
