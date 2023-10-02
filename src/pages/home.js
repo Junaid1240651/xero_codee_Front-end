@@ -4,10 +4,10 @@ import Navbar from "../components/navbar";
 import SidebarMenu from "../components/sidebarMenu";
 import Dashboard from "../components/dashboard";
 
-const Home = () => {
+const Home = ({ onAuthentication }) => {
   return (
     <div className="home-container">
-      <Navbar />
+      <Navbar onAuthentication={onAuthentication} />
       <SidebarMenu />
       <div className="home-content">
         <Dashboard />
