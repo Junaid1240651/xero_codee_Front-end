@@ -1,0 +1,112 @@
+.hostingSetup-container {
+  background-image: url(../images/background2.png);
+  background-color: #cbdefb;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hostingSetup-content {
+  width: 80%;
+  height: 45%;
+  padding: 30px 0px;
+  border-radius: 40px;
+  background-color: white;
+}
+.hostingSetup-content > p {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0px;
+}
+.button-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.button-group > button {
+  padding: 5px 20px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border: 2px solid rgba(192, 192, 192, 1);
+}
+.input-sectio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  gap: 20px;
+}
+.input-sectio-hidden {
+  display: none;
+}
+.input-sectio input {
+  width: 25%;
+  padding: 8px;
+  border: 0.125rem solid #c0c0c0;
+  border-radius: 0.3125rem;
+}
+.input-sectio button {
+  padding: 11px 30px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  background-color: rgba(31, 100, 255, 1);
+}
+.button-group > button {
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* Style for active button */
+button.active {
+  border: none;
+  background-color: rgba(31, 100, 255, 1);
+  color: white;
+}
+.hostingSetup-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 80px;
+}
+.hostingSetup-options > button {
+  padding: 10px 0px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 350px;
+  border: 2px solid rgba(192, 192, 192, 1);
+}
+.hostingSetup-options > button:hover {
+  border: none;
+  background-color: rgba(31, 100, 255, 1);
+  color: white;
+}
+.hidden-button-group {
+  visibility: hidden;
+}
+.section-heade {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #00002280;
+  font-weight: 600;
+}
+.section-heade > p {
+  margin: 0px;
+  padding: 0px 20px;
+}
+.divider {
+  width: 18vh;
+  background-color: black;
+  height: 2px;
+}

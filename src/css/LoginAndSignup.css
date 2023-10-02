@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Nunito;
+}
+
+.login-signup-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  background-image: url(../images/background2.png);
+  background-color: #cbdefb;
+  align-items: center;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1.3rem 0 0 2.5rem;
+  border-top-right-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  height: 300px;
+  justify-content: end;
+  text-align: center;
+  align-items: center;
+}
+.ASDasd {
+  width: 220px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+
+form input {
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+  font-size: 0.9375rem;
+  width: 375px;
+  border: 0.125rem solid #c0c0c0;
+  border-radius: 0.3125rem;
+}
+
+::placeholder {
+  color: rgba(0, 0, 34, 0.5);
+  font-weight: 600;
+  opacity: 1; /* Firefox */
+}
+
+input:focus {
+  border: 0.125rem solid #c0c0c0;
+  box-shadow: none;
+  outline-offset: 0;
+  outline: none;
+}
+
+.rightDiv-image {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.875rem;
+}
+
+.rightDiv-image > img {
+  width: 90%;
+}
+
+.oauth-providers {
+  display: flex;
+  width: 410px;
+  justify-content: space-between;
+}
+.header-contant {
+  width: 45%;
+  text-align: center;
+  padding: 0rem 3.75rem 0.625rem 1.25rem;
+}
+
+.login-button {
+  background-color: #1f64ff;
+  color: white;
+  padding: 0.625rem 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3125rem;
+  font-weight: 600;
+  width: 100%;
+  font-size: 0.9375rem;
+}
+.Complete-SignUp-button {
+  background-color: #1f64ff;
+  color: white;
+  padding: 0.625rem 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3125rem;
+  font-weight: 600;
+  width: 95.7%;
+  font-size: 0.9375rem;
+}
+
+.oauth-providers > button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0.1875rem;
+  padding: 0 1.3rem;
+  font-size: 0.75rem;
+  border: 0.0625rem solid #c0c0c0;
+  background-color: white;
+  font-weight: 600;
+  color: rgb(104, 93, 93);
+}
+
+.or-divider {
+  margin: 0.8rem 0;
+  color: rgba(0, 0, 34, 0.5);
+  font-weight: 600;
+}
+
+.switch-action {
+  color: rgba(0, 0, 34, 0.5);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.link-text-primary {
+  color: rgba(31, 100, 255, 1);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #00002280;
+  font-weight: 600;
+}
+
+.divider-div {
+  width: 120px;
+  background-color: black;
+  height: 0.125rem;
+}
+@media only screen and (max-width: 1100px) {
+}

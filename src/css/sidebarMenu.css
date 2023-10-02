@@ -1,0 +1,55 @@
+/* sidebarMenu.css */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  position: fixed;
+  margin-top: 110px;
+  padding-left: 25px;
+  overflow: scroll;
+
+  background-color: rgba(194, 218, 251, 1);
+}
+
+.menu-item {
+  display: flex;
+  overflow: scroll;
+
+  align-items: center;
+  gap: 30px;
+  font-weight: 600;
+  padding: 12px 0px 12px 40px;
+  cursor: pointer;
+}
+
+.menu-item.selected {
+  background-color: white;
+  padding: 12px 0px 12px 40px;
+  border-radius: 20px;
+}
+
+.menu-item > p {
+  width: 130px;
+}
+
+.menu-item > img {
+  width: 20px;
+}
+
+.menu-item > img {
+  width: 20px;
+}
+
+.sidebar-selectDiv {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  margin-left: -2px;
+}
+.sidebar-menu-content {
+  display: flex;
+  align-items: center;
+}
+/* Add any additional styles or modifications you need here */
