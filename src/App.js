@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import HostingSetup from "./components/hostingSetup";
 import LoginAndSignup from "./components/loginAndSignup";
 import Home from "./pages/home";
+import Navbar from "./components/navbar";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -11,6 +12,7 @@ function App() {
 
   const handleAuthentication = () => {
     setIsAuthenticated(true);
+    console.log("chala");
   };
 
   const handleLogout = () => {
@@ -69,7 +71,13 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
+          element={
+            isAuthenticated ? (
+              <Home onAuthentication={handleLogout} />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
         />
         <Route
           path="/signup"
