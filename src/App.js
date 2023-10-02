@@ -12,7 +12,7 @@ function App() {
 
   const handleAuthentication = () => {
     setIsAuthenticated(true);
-    console.log("chala");
+   
   };
 
   const handleLogout = () => {
