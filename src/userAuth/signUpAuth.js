@@ -5,7 +5,8 @@ const SignUpAuth = async (
   formData,
   onAuthentication,
   setLoadingScreen,
-  navigate
+  navigate,
+  setIsNewUser
 ) => {
   try {
     const password = formData.get("password");
@@ -28,7 +29,7 @@ const SignUpAuth = async (
       }
     );
 
-    if (response.status === 201) {
+    if (response.status === 200) {
       localStorage.setItem("token", response.data.token);
       localStorage.setItem(
         "userDetails",
@@ -37,13 +38,25 @@ const SignUpAuth = async (
       onAuthentication();
       setLoadingScreen(false);
       navigate("/choose");
+    } else if (response.status === 201) {
+      localStorage.setItem(
+        "userDetails",
+        JSON.stringify(response.data.userData)
+      );
+      setLoadingScreen(false);
+      alert(
+        "Account is Already ragistered with this Email Address  Please Set Your Password"
+      );
+      setIsNewUser(true);
     } else {
       setLoadingScreen(false);
       console.error("Signup failed with status code:", response.status);
     }
   } catch (error) {
     setLoadingScreen(false);
-    alert("Signup failed. Please check your signup details.");
+    alert("User is Already Ragistered with this Email Address Please Login");
+    setIsNewUser(false);
+    navigate("/login");
   }
 };
 

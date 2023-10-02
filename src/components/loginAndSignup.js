@@ -18,10 +18,10 @@ import Hello from "../images/Hello.png";
 import Github from "../images/github.png";
 import "../css/LoginAndSignup.css";
 import LoadingScreen from "./LoadingScreen";
-import handleGoogleLogin from "../Oauth/googleAuth";
-import SignUpAuth from "../Oauth/signUpAuth";
-import LoginAuth from "../Oauth/loginAuth";
-import CreatePassword from "../Oauth/createPasswordAuth";
+import handleGoogleLogin from "../userAuth/googleAuth";
+import SignUpAuth from "../userAuth/signUpAuth";
+import LoginAuth from "../userAuth/loginAuth";
+import CreatePassword from "../userAuth/createPasswordAuth";
 const clientId = process.env.REACT_APP_CLIENT_ID;
 const googleClientId = process.env.REACT_APP_GOOGLE_CLIEND_ID;
 
@@ -47,7 +47,14 @@ const LoginAndSignup = ({ onAuthentication }) => {
     const formData = new FormData(e.target);
 
     // Call the signUpAuth function with the necessary parameters
-    SignUpAuth(formData, onAuthentication, setLoadingScreen, navigate);
+    setIsNewUser(true);
+    SignUpAuth(
+      formData,
+      onAuthentication,
+      setLoadingScreen,
+      navigate,
+      setIsNewUser
+    );
   };
 
   const handleLoginSubmit = async (e) => {
