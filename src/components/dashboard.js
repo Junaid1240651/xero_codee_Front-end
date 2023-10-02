@@ -18,6 +18,11 @@ const Dashboard = () => {
   const [showStep2, setShowStep2] = useState(false);
   const [showStep3, setShowStep3] = useState(false);
   const [percentage, setPercentage] = useState(0);
+  const [userDetails, setUserDetails] = useState({
+    FirstName: "",
+    LastName: "",
+    Email: "",
+  });
 
   const handleServiceClick = (service, step) => {
     setSelectedServices((prevSelectedServices) => ({
@@ -66,10 +71,24 @@ const Dashboard = () => {
     setPercentage(stepPercentage);
   }, [selectedServices]);
 
+  useEffect(() => {
+    // Check if the user has a valid JWT token stored in localStorage
+    const token = localStorage.getItem("token");
+    const parsedData = JSON.parse(localStorage.getItem("userDetails"));
+
+    if (token) {
+      setUserDetails(parsedData);
+      // You should also validate the token on the server-side
+      // For simplicity, we assume a token is valid if it exists in localStorage
+    } else {
+    }
+  }, []);
+
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <p>Hi Aryan!</p>
+        Hi{" "}
+        {userDetails ? userDetails.firstName + " " + userDetails.lastName : ""}
         <p>Welcome To XeroCodee Ecosystem</p>
       </div>
       <div className="steps-container">
