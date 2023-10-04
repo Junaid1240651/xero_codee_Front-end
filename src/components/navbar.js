@@ -53,14 +53,15 @@ const Navbar = ({ onAuthentication }) => {
           <div className="profileArrow" onClick={toggleDropdown}>
             <p>Xero Code</p>
             <img src={Arrow} alt="profileArrow" />
-          </div>
-          {isOpen && (
+            {isOpen && (
             <div className="dropdown-content">
               <p className="Logout" onClick={handleClick}>
                 Logout
               </p>
             </div>
           )}
+          </div>
+          
           <div className="info-icon">
             <img src={iconInfo} alt="InfoIcon" />
           </div>
