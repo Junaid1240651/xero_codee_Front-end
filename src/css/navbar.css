@@ -121,13 +121,8 @@
 }
 .dropdown-content {
   position: absolute;
-  top: 103%;
-  left: 90.5%;
+  top: 100%;
   cursor: pointer;
-}
-
-.profileArrow:hover .dropdown-content {
-  display: block;
 }
 .Logout {
   background-color: rgba(194, 218, 251, 1);
