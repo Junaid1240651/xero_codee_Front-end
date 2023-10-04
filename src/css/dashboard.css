@@ -99,7 +99,9 @@
 .steps-container-content {
   display: flex;
   width: 100%;
+  flex-direction: column;
   justify-content: space-between;
+  margin-top: 15px;
 }
 .step-container-content {
   display: flex;
@@ -217,6 +219,10 @@
 .selected-service {
   width: 100%;
   margin-top: 10px;
+}
+
+.selected {
+  background-color: rgba(194, 218, 251, 1);
 }
 
 @media only screen and (max-width: 1300px) {
