@@ -47,7 +47,7 @@ const LoginAndSignup = ({ onAuthentication }) => {
     const formData = new FormData(e.target);
 
     // Call the signUpAuth function with the necessary parameters
-    setIsNewUser(true);
+   
     SignUpAuth(
       formData,
       onAuthentication,
