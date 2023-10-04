@@ -187,11 +187,12 @@ const LoginAndSignup = ({ onAuthentication }) => {
                     <input placeholder="First Name" name="firstName" required />
                     <input placeholder="Last Name" name="lastName" required />
                     <input placeholder="Email Id" name="email" required />
-                    <input placeholder="Password" name="password" required />
+                    <input placeholder="Password" name="password"  type="password" required />
                     <input
                       placeholder="Confirm Password"
                       name="confirmPassword"
                       required
+                       type="password"
                     />
                     <button className="login-button" type="submit">
                       SIGN UP
@@ -209,7 +210,7 @@ const LoginAndSignup = ({ onAuthentication }) => {
                   method="post"
                 >
                   <input placeholder="Email Id" name="email" required />
-                  <input placeholder="Password" name="password" required />
+                  <input placeholder="Password" name="password"  type="password" required />
                   <button className="login-button" type="submit">
                     Login
                   </button>
